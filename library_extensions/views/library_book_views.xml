@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Main Menu -->
+    <menuitem id="library_menu_main_extended"
+              name="Library"
+              sequence="5"/>
+
+    <!-- Book List View -->
+    <record id="library_book_view_tree_extended" model="ir.ui.view">
+        <field name="name">library.book.tree.extended</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <tree string="Books">
+                <field name="name"/>
+                <field name="author_id"/>
+                <field name="category_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Book Form View -->
+    <record id="library_book_view_form_extended" model="ir.ui.view">
+        <field name="name">library.book.form.extended</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <form string="Book">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author_id"/>
+                        <field name="category_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Book Action -->
+    <record id="library_book_action_extended" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Book Menu -->
+    <menuitem id="library_book_menu_extended"
+              name="Books"
+              parent="library_menu_main_extended"
+              action="library_book_action_extended"
+              sequence="10"/>
+
+</odoo>

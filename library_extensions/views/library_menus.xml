@@ -1,0 +1,5 @@
+<odoo>
+    <menuitem id="library_menu_main_extended"
+              name="Library"
+              sequence="10"/>
+</odoo>
