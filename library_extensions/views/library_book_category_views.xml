@@ -37,7 +37,7 @@
     <!-- Category Menu -->
     <menuitem id="menu_library_book_category"
               name="Book Categories"
-              parent="library_menu_main_extended"
+              parent="library.library_menu_main"
               action="action_library_book_category"
               sequence="20"/>
 
